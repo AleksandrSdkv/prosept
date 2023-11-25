@@ -1,0 +1,13 @@
+.button-table {
+  width: 220px;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #38a43a 0%, #00b7ea 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}

@@ -1,0 +1,11 @@
+.distributer_list {
+  width: 790px;
+  height: 550px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.distributer__btn-group {
+  margin: 0 43px 0;
+  display: flex;
+  gap: 73px;
+}

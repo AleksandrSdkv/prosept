@@ -1,7 +1,11 @@
 @import url("./vendor/normalize.css");
 @import url("./vendor/fonts.css");
 @import url("../src/components/Header/header.css");
+@import url("../src/components/Footer/Footer.css");
 @import url("../src/components/Header/Dropdown/dropdown.css");
+@import url("../src/components/MainContent/MainContent.css");
+@import url("../src/components/TableButton/TableButton.css");
+@import url("../src/components/MainContent/DistributorTable/DistributorTable.css");
 :root {
     font-family: "DIN pro", sans-serif;
     color-scheme: light dark;
