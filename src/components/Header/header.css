@@ -1,0 +1,22 @@
+.logo {
+    width: 140px;
+    height: 88px;
+    background-image: url("../../images/logo.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    padding: 17px 55px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header::after {
+    content: "";
+    border-bottom: 1px solid #34A648;
+    padding-top: 17px;
+    width: 100%;
+}
