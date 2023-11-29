@@ -9,6 +9,12 @@ import { getDeleprices } from "../src/utils/index";
 import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    getDeleprices().then((response) => {
+      console.log(response);
+    });
+  }, []);
+
   return (
     <>
       <Routes>
