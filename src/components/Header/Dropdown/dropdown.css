@@ -1,6 +1,7 @@
 .dropdown {
-  width: 400px;
-  height: 50px;
+  width: 176px;
   border-radius: 5px;
-  border: 1px solid #000;
+  border: 1px solid #34a648;
+  text-align: center;
+  padding: 10px;
 }

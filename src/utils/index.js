@@ -1,23 +1,16 @@
-import axios from "axios";
-let config = {
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded",
-  },
-};
+import { basicResponse } from "./instance";
+
 export const getApi = () => {
-  axios
-    .post(
-      "http://45.87.246.151:8000/api/auth/jwt/login",
-      {
-        username: "super@gmail.com",
-        password: "Super_Customer",
-      },
-      config
-    )
-    .then((response) => {
-      console.log(response.status);
+  basicResponse
+    .post("api/auth/jwt/login", {
+      username: "super@gmail.com",
+      password: "Super_Customer",
     })
-    .catch((error) => {
-      console.log(error);
+    .then(() => {
+      return JSON.response();
     });
+};
+
+export const getDeleprices = () => {
+  return basicResponse.get("/api/dealerprices/");
 };

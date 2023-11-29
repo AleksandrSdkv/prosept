@@ -6,12 +6,15 @@
 @import url("../src/components/MainContent/MainContent.css");
 @import url("../src/components/TableButton/TableButton.css");
 @import url("../src/components/MainContent/DistributorTable/DistributorTable.css");
+@import url("../src/components/MainContent/ManufactureTable/ManufactureTable.css");
+@import url("../src/components/MainContent/Sidebar/Sidebar.css");
+
 :root {
-    font-family: "DIN pro", sans-serif;
-    color-scheme: light dark;
-    background-color: #ffffff;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: "DIN pro", sans-serif;
+  color-scheme: light dark;
+  background-color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
