@@ -11,10 +11,7 @@
   justify-content: center;
   gap: 10px;
 }
-.manufacture__table-item:hover {
-  cursor: pointer;
-  background: #ffffcc;
-}
+
 .manufacture__table {
   display: flex;
   padding: 0;
@@ -23,7 +20,7 @@
   gap: 10px;
   flex-direction: column;
 }
-.manufacture__table-item-name {
+.manufacture__table-item-price {
   color: #000;
   font-size: 24px;
   font-style: normal;
@@ -31,11 +28,11 @@
   line-height: normal;
   margin: 0;
 }
-.manufacture__table-item-article {
+.manufacture__table-item-name {
   margin: 0;
   overflow: hidden;
   text-overflow: clip;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

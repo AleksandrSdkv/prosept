@@ -1,11 +1,31 @@
 .distributer_list {
   width: 790px;
-  height: 550px;
+
   margin: auto;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 .distributer__btn-group {
-  margin: 0 43px 0;
+  margin: 116px auto 20px auto;
   display: flex;
   gap: 73px;
+}
+.distributor__table-item {
+  width: 700px;
+  margin: 0 35px 0;
+  height: 96px;
+  border-radius: 9px;
+  border: 1px solid #000;
+  background: #fff;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  gap: 30px;
+}
+.distributor__table-item:hover {
+  cursor: pointer;
+  background: #ffffcc;
 }
