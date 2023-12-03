@@ -1,0 +1,13 @@
+.dillers__header{
+    width: 1330px;
+    margin: 0 auto 50px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #34A648;
+}
+
+.dillers__logo{
+    width: 102px;
+    height: 71px;
+    margin-top: 17px;
+    margin-left: 7px;
+}

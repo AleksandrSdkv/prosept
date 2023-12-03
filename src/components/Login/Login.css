@@ -1,5 +1,4 @@
 .login {
-    background: rgba(193, 255, 194, 0.6);
     box-sizing: border-box;
     max-width: 1920px;
     min-height: 100vh;
@@ -25,7 +24,7 @@
 }
 
 .login__form{
-    width: 70%;
+    width: 40%;
     margin: 90px auto 0;
 }
 
