@@ -1,15 +1,16 @@
-.dillers_table{
-    width: 1330px;
-    margin: 0 auto;
-    /* border-spacing: 10px;
-    border: 1px solid gray;   */
+.dillers_table {
+  width: 1440px;
+  margin: 20px auto;
 }
 
-.dillers_table__thead{
-    background-color: rgba(52, 166, 72, 0.5);
-    border-spacing: 10px;
+.dillers_table__thead {
+  background-color: rgba(52, 166, 72, 0.5);
+  border-spacing: 10px;
 }
-.dillers_table__tr{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.dillers_table__tr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+td {
+  cursor: pointer;
 }

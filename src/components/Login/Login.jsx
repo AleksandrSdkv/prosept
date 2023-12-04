@@ -1,16 +1,31 @@
 import "./Login.css";
 import logo from "../../images/logo.svg";
 import { useState } from "react";
-import { getDeleprices } from "../../utils";
-
+import { useDispatch } from "react-redux";
+import { fetchUserLogin } from "../../store/thunks";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 export function Login() {
+  const authenticated = localStorage.getItem("authenticated");
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [isData, setIsData] = useState({ username: "", password: "" });
+
+  useEffect(() => {
+    if (authenticated) navigate("/", { replace: true });
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    dispatch(fetchUserLogin(isData)).then((res) => {
+      if (res.meta.requestStatus === "fulfilled") {
+        navigate("/", { replace: true });
+      }
+    });
   };
 
-  getDeleprices();
   const handleChange = (event) => {
     setIsData({
       ...isData,

@@ -1,18 +1,13 @@
-import "./Dillers.css"
-import logo from "../../images/logo.svg"
-import { DillersCardList } from "./DillersCardList/DillersCardList"
-
+import "./Dillers.css";
+import { Header } from "../../components/Header/header";
+import { DillersCardList } from "./DillersCardList/DillersCardList";
+import { Sidebar } from "../MainContent/Sidebar/Sidebar";
 export function Dillers() {
-    return(
-        <>
-            <div className="dillers__header">
-                <img
-                    className="dillers__logo"
-                    src={logo}
-                    alt="логотип"
-                />
-            </div>
-            <DillersCardList  />          
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <DillersCardList />
+      <Sidebar />
+    </>
+  );
 }

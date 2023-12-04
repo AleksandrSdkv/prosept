@@ -1,3 +1,4 @@
 export function Dropdown() {
-  return <p className="dropdown">super@gmail.com</p>;
+  const localUsername = localStorage.getItem("username");
+  return <p className="dropdown">{localUsername}</p>;
 }

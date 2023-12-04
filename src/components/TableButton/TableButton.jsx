@@ -1,3 +1,3 @@
-export function TableButton({ nameBtn }) {
-  return <button className="button-table">{nameBtn}</button>;
+export function TableButton({ nameBtn, styleBtn }) {
+  return <button className={`button-table ${styleBtn}`}>{nameBtn}</button>;
 }
