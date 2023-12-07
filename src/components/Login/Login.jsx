@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./Login.css";
 import logo from "../../images/logo.svg";
 import { useState } from "react";
@@ -8,10 +9,10 @@ import { useEffect } from "react";
 export function Login() {
   const authenticated = localStorage.getItem("authenticated");
 
+  const [isData, setIsData] = useState({ username: "", password: "" });
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const [isData, setIsData] = useState({ username: "", password: "" });
 
   useEffect(() => {
     if (authenticated) navigate("/", { replace: true });

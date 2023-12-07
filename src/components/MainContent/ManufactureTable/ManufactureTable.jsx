@@ -1,34 +1,40 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Table } from "../../Table/Table";
-import { Card } from "../Card/Card";
+import { useParams } from "react-router-dom";
+import { getDeleprices } from "../../../utils/index";
+import { useEffect, useState } from "react";
 
 export function TableManufacture() {
-  const products = [
-    {
-      product_key: 1,
-      price: 0,
-      product_name: "string",
-      status: false,
-      dealer_id: 0,
-      product: {
-        article: "антисептик",
-        name: "Пропитка водоотталкивающая Prosept Aquaisol для камня концен. 1:2 1л",
-        cost: 0,
-        recommended_price: "233",
-      },
-    },
-  ];
+  const [data, setData] = useState([]);
+  let { id } = useParams();
 
-  const dilstributorList = products.map((product) => (
-    <Card
-      key={product.product_key}
-      product={product}
-      name={"manufacture__table-item"}
-    />
-  ));
+  useEffect(() => {
+    getDeleprices().then((res) =>
+      setData([...data, ...res.data.splice(0, 60)])
+    );
+  }, []);
+
+  const product = data.find((f) => f.id + "" === id);
 
   return (
     <Table typeTable="manufacture" typeHeader="Каталог дилерских предложений">
-      <div className="manufacture__table">{dilstributorList}</div>
+      <div className={"manufacture__table-item"}>
+        {product ? (
+          <>
+            <h3 className="manufacture__table-item-name">
+              {product.product_name}
+            </h3>
+            <div className="manufacture__table-group">
+              <p className="manufacture__table-item-price">
+                {product.price + "p"}
+              </p>
+              <div className={"manufacture__table-item-icon"}></div>
+            </div>
+          </>
+        ) : (
+          <h2>🌀 Loading...</h2>
+        )}
+      </div>
     </Table>
   );
 }

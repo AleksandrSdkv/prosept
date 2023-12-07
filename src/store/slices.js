@@ -10,10 +10,7 @@ export const userSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchUserLogin.fulfilled, (state, action) => {
-      console.log(state);
-      console.log(action);
       state.statusUser = "success";
-
       state.username = action.meta.arg.username;
       localStorage.setItem("username", state.username);
     });

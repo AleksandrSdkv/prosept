@@ -1,7 +1,9 @@
 import { basicResponse } from "./instance";
 
-export const logout = () => {
-  return basicResponse.post("api/auth/jwt/logout");
+export const logout = (token) => {
+  return basicResponse.post("api/auth/jwt/logout", {
+    token,
+  });
 };
 
 export const login = ({ username, password }) => {

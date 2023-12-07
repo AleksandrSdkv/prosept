@@ -5,6 +5,7 @@ export function Card(props) {
   function handleCLick() {
     setIsChange(!isChange);
   }
+
   return (
     <div className={props.name} onClick={handleCLick}>
       <p className="manufacture__table-item-name">

@@ -1,18 +1,13 @@
-// import React from 'react';
 import { useTable, useSortBy, useGlobalFilter } from "react-table";
 import { columns } from "../../../utils/constants/DataSource";
-import { getDeleprices } from "../../../utils/index";
 import "./DillersCardTable.css";
-import { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+import { useGetDeleprices } from "../../../hooks/useGetDeleprices";
 export function DillersCardTable() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    getDeleprices().then((res) =>
-      setData([...data, ...res.data.splice(0, 60)])
-    );
-  }, []);
-  console.log(data);
+  const { data } = useGetDeleprices();
+
+  const navigate = useNavigate();
+
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable(
       {
@@ -25,6 +20,9 @@ export function DillersCardTable() {
       useGlobalFilter,
       useSortBy
     );
+  const navigateToProduct = (event, product) => {
+    navigate(`/item/${product.id}`);
+  };
   return (
     <table {...getTableProps()} className="dillers_table">
       <thead className="dillers_table__thead">
@@ -56,7 +54,13 @@ export function DillersCardTable() {
             <tr key={index} {...row.getRowProps()}>
               {row.cells.map((cell, index) => {
                 return (
-                  <td key={index} {...cell.getCellProps()}>
+                  <td
+                    onClick={(e) => {
+                      navigateToProduct(e, row.original);
+                    }}
+                    key={index}
+                    {...cell.getCellProps()}
+                  >
                     {cell.render("Cell")}
                   </td>
                 );
