@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite Инструкция по развертыванию:
 
 1. npm i
 

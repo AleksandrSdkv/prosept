@@ -1,7 +1,6 @@
 .distributer_list {
   width: 790px;
-
-  margin: auto;
+  margin: 50px auto;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;

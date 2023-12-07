@@ -1,13 +1,13 @@
 export const columns = [
   {
-    Header: "name_1C",
+    Header: "Название 1С",
     accessor: "product_name",
 
-      filter: (rows, id, filterType) =>
+    filter: (rows, id, filterType) =>
       rows.filter((row) => row.values[id].startsWith(filterType)),
   },
   {
-    Header: "Продавцы",
+    Header: "ID Дилера",
     accessor: "dealer_id",
   },
   {
@@ -19,4 +19,4 @@ export const columns = [
     accessor: "price",
   },
 ];
-
+export let randomNumber = Math.floor(Math.random() * 601) + 500;

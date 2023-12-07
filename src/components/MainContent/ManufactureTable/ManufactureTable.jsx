@@ -1,20 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Table } from "../../Table/Table";
-import { useParams } from "react-router-dom";
-import { getDeleprices } from "../../../utils/index";
-import { useEffect, useState } from "react";
+import Preloader from "../../Preloader/Preloader";
 
-export function TableManufacture() {
-  const [data, setData] = useState([]);
-  let { id } = useParams();
-
-  useEffect(() => {
-    getDeleprices().then((res) =>
-      setData([...data, ...res.data.splice(0, 60)])
-    );
-  }, []);
-
-  const product = data.find((f) => f.id + "" === id);
+export function TableManufacture({ idCard, productArray }) {
+  const product = productArray.find((f) => f.id + "" === idCard);
 
   return (
     <Table typeTable="manufacture" typeHeader="Каталог дилерских предложений">
@@ -32,7 +21,7 @@ export function TableManufacture() {
             </div>
           </>
         ) : (
-          <h2>🌀 Loading...</h2>
+          <Preloader />
         )}
       </div>
     </Table>
