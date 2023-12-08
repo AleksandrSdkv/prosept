@@ -1,13 +1,13 @@
 .distributer_list {
   width: 790px;
-  margin: 50px auto;
+  margin: 20px auto;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 18px;
 }
 .distributer__btn-group {
-  margin: 116px auto 20px auto;
+  margin: 80px auto 20px auto;
   display: flex;
   gap: 73px;
 }
@@ -21,10 +21,19 @@
   box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.25);
   display: flex;
   padding: 10px;
-  justify-content: center;
   gap: 30px;
+  justify-content: space-between;
 }
 .distributor__table-item:hover {
   cursor: pointer;
   background: #ffffcc;
+}
+
+.distributer__no-predication {
+  font-weight: 400;
+  line-height: normal;
+  margin: 89px auto 117px;
+  color: #333333;
+  font-size: 30px;
+  line-height: 54px;
 }

@@ -19,4 +19,9 @@ export const columns = [
     accessor: "price",
   },
 ];
-export let randomNumber = Math.floor(Math.random() * 601) + 500;
+
+export let randomNumbers = [];
+for (let i = 0; i < 5; i++) {
+  let randomNumber = Math.floor(Math.random() * 601) + 900;
+  randomNumbers.push(randomNumber);
+}

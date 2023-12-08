@@ -4,7 +4,6 @@ import Preloader from "../../Preloader/Preloader";
 
 export function TableManufacture({ idCard, productArray }) {
   const product = productArray.find((f) => f.id + "" === idCard);
-
   return (
     <Table typeTable="manufacture" typeHeader="Каталог дилерских предложений">
       <div className={"manufacture__table-item"}>
